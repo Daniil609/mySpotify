@@ -1,0 +1,89 @@
+.header-dark {
+    padding-left: 35%;
+}
+
+.account-layout {
+    align-items: unset;
+}
+
+.user-info {
+    font-size: 40px;
+}
+
+.user-info span:first-of-type {
+    color: gray;
+}
+
+.user-info span:not(:first-of-type) {
+    color: white;
+}
+
+.user-info .user-info__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-bottom: 1.5rem;
+}
+
+.user-info .user-info__email {
+    display: flex;
+    align-items: center;
+}
+
+.email__items {
+    display: flex;
+    flex-direction: column;
+}
+
+.change_email {
+    margin-left: 50%;
+}
+
+.change_email_button {
+    font-family: 'Open Sans';
+    font-size: 40px;
+    padding: 1rem;
+    border-radius: 40px;
+    color: white;
+    background-color: gray;
+}
+
+.change_email_button:hover {
+    background-color: white;
+    color: black;
+}
+
+.user-info .user-info__subscription {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .header-dark h1 {
+        margin-left: -40%;
+    }
+
+    .change_email {
+        width: 30px;
+    }
+
+    .key {
+        margin-left: -10px;
+        color: gray;
+    }
+
+    .value {
+        margin-left: -10px;
+    }
+
+    .change_email_button {
+        position: absolute;
+        right: 20px;
+        width: 30%;
+        font-size: 20px;
+        top: 290px;
+    }
+}

@@ -1,0 +1,117 @@
+.search-form {
+  color: #555;
+  display: flex;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+}
+
+.search-form .search-form__field {
+  background: transparent;
+  margin: 0;
+  font-size: 28px;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 0 1rem;
+}
+
+.search-form .search-form__field::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.search-form .search-form__field:focus {
+  box-shadow: 0 0 3px 0 #1183d6;
+  border-color: #1183d6;
+  outline: none;
+}
+
+#no-records {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem auto 1rem;
+}
+
+#no-records h1 {
+  margin-top: 2.5rem;
+}
+
+.music-grid__item svg {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 6%;
+  left: 20%;
+  z-index: 999;
+}
+
+.music-grid__item:hover svg {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.music-grid__item svg.visible {
+  display: block;
+}
+
+.wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.music-grid .music-grid__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-grid .music-grid__item .music-grid__item__avatar {
+  width: 145px;
+  height: 145px;
+  border: 5px solid rgb(255, 255, 255);
+}
+
+.music-grid .music-grid__item .music-grid__item__caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+}
+
+.pagination {
+  margin-top: 1rem;
+}
+
+.pagination .pagination-arrow:first-of-type {
+  transform: rotate(180deg);
+  margin-right: 0.5rem;
+}
+
+.pagination .pagination-arrow {
+  width: 35px;
+  height: 35px;
+}
+
+@media only screen and (max-width: 500px) {
+  .music-grid {
+    grid-template-columns: repeat(1, 1fr);
+    overflow-y: auto;
+    height: 315px;
+  }
+
+  .search-form .search-form__field {
+    font-size: 24px;
+    padding: 9px 4px 9px 16px;
+  }
+}
